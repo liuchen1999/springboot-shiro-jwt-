@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.246.176:3306/test?serverTimezone=UTC&zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=UTF-8
+    username: root
+    password: Lc123456789
+    type: com.alibaba.druid.pool.DruidDataSource
+
+server:
+
+  port: 8088
+
+
+#  mybatis
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.lc.demo.entity
+  configuration:
+    call-setters-on-nulls: true
+    map-underscore-to-camel-case: false
+logging:
+  level:
+    com.lc.demo.mapper: debug
